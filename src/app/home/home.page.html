@@ -17,21 +17,27 @@
 <ion-title size="small">Gorjeta: {{resGorjeta}}</ion-title>
 <ion-label>Valor Final: {{valorConta}}</ion-label>
 
+
 <ion-title>Converter medidas</ion-title>
+<ion-item>
 <ion-range [ticks]="true" [snaps]="true" [min]="0" [max]="100"></ion-range>
+</ion-item>
 <ion-item>
 <ion-radio-group>
-  <ion-radio>Centímetros</ion-radio>
-  <ion-radio>Metros</ion-radio>
-  <ion-radio>Quilometros</ion-radio>
+  <ion-radio value="cm">Centímetros</ion-radio>
+  <ion-radio value="metro">Metros</ion-radio>
+  <ion-radio value="km">Quilometros</ion-radio>
 </ion-radio-group>
 </ion-item>
+
 <ion-item>
 <ion-radio-group>
   <ion-radio>Polegadas</ion-radio>
   <ion-radio>Pés</ion-radio>
-  <ion-radio>Milhas</ion-radio>
 </ion-radio-group>
+</ion-item>
+<ion-item>
+<ion-title size="small">Resultado: {{resMedida}}</ion-title>
 </ion-item>
 </div>
 </ion-content>
