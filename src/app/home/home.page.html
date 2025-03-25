@@ -7,14 +7,21 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<div id="container">
+  <ion-title>Calcular Gorjeta</ion-title>
+  <ion-item>
+    <ion-input placeholder="Digite o valor da conta" type="number" [(ngModel)]="inputValor"></ion-input>
+  </ion-item>
+<ion-range (ionChange)="calcularGorjeta($event)" [ticks]="true" [snaps]="true" [min]="0" [max]="30"></ion-range>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-title size="small">Gorjeta: {{resGorjeta}}</ion-title>
+<ion-label>Valor Final: {{valorConta}}</ion-label>
+
+<ion-title>Converter medidas</ion-title>
+<ion-input type="number" placeholder="Digite um valor" [(ngModel)]="medida"></ion-input>
+<ion-radio-group>
+  <ion-radio>Metros</ion-radio>
+  <ion-radio>Quilometros</ion-radio>
+</ion-radio-group>
+</div>
 </ion-content>
