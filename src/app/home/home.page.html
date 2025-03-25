@@ -18,10 +18,20 @@
 <ion-label>Valor Final: {{valorConta}}</ion-label>
 
 <ion-title>Converter medidas</ion-title>
-<ion-input type="number" placeholder="Digite um valor" [(ngModel)]="medida"></ion-input>
+<ion-range [ticks]="true" [snaps]="true" [min]="0" [max]="100"></ion-range>
+<ion-item>
 <ion-radio-group>
+  <ion-radio>Centímetros</ion-radio>
   <ion-radio>Metros</ion-radio>
   <ion-radio>Quilometros</ion-radio>
 </ion-radio-group>
+</ion-item>
+<ion-item>
+<ion-radio-group>
+  <ion-radio>Polegadas</ion-radio>
+  <ion-radio>Pés</ion-radio>
+  <ion-radio>Milhas</ion-radio>
+</ion-radio-group>
+</ion-item>
 </div>
 </ion-content>

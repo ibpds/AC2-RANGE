@@ -24,6 +24,12 @@ export class HomePage {
   };
 
   medida = '';
+  cm = '';
+  metro = ''
+  km = '';
+  pes = '';
+  polegadas = '';
+  milhas = '';
 
   converterMedidas(ev:RangeCustomEvent){
     this.valorRange = (Number(ev.detail.value.toString()));
