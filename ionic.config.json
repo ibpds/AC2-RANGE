@@ -1,0 +1,7 @@
+{
+  "name": "AC2-RANGE",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
